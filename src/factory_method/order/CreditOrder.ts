@@ -12,7 +12,7 @@ class CreditOrder extends Order {
   }
 
   public pay(): void {
-    console.info(`Order with credit amount ${ this.amount } is done`)
+    this.printer.print(`Order with credit amount ${ this.amount } is done`)
   }
 }
 

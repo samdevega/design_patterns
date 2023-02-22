@@ -8,6 +8,7 @@ import { Printer } from './Printer'
 describe('Seller', () => {
   let seller: Seller
   const buyerName = 'John Doe'
+  const printerSpy = jest.spyOn(Printer.prototype, 'print')
 
   describe('given an HTML documentation builder', () => {
     beforeEach(() => {
@@ -23,7 +24,6 @@ describe('Seller', () => {
     })
 
     it('should build documentation for a buyer in the proper format', () => {
-      const printerSpy = jest.spyOn(Printer.prototype, 'print')
       const documentation = seller.build(buyerName)
 
       documentation.print()
@@ -51,7 +51,6 @@ describe('Seller', () => {
     })
 
     it('should build documentation for a buyer in the proper format', () => {
-      const printerSpy = jest.spyOn(Printer.prototype, 'print')
       const documentation = seller.build(buyerName)
 
       documentation.print()

@@ -10,7 +10,7 @@ class CashOrder extends Order {
   }
 
   public pay(): void {
-    console.info(`Order with cash amount ${ this.amount } is done`)
+    this.printer.print(`Order with cash amount ${ this.amount } is done`)
   }
 }
 
